@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marriage Form - Z.E.O.T</title>
+  
+  <link rel="stylesheet" href="style.css" />
+ 
+     
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+      <h1 class="logo">Z.E.O.T</h1>
+      <ul class="nav-links">
+        <li><a href="apropos.html">ABOUT</a></li>
+        <li><a href="form.html">FORM</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2>Religious Marriage Form</h2>
+    <p>Based on Islamic principles and the Maliki school</p>
+  </div>
+</section>
+
+
+<section class="form-section">
+    <form class="formulaire-mariage">
+      <h1>📜 Religious Marriage Certificate </h1>
+
+      <!-- Numéro auto -->
+      <div class="form-group">
+        <label for="certificat_id">Certificate Number:</label>
+        <input type="text" id="certificat_id" readonly>
+      </div>
+
+      <!-- Homme -->
+       <div class="flex-fields">
+      <fieldset>
+        <legend>🧔 Groom's Information</legend>
+        <input type="text" placeholder="Last Name " required>
+        <input type="text" placeholder="First Name" required>
+        <input type="date" required>
+        
+  <input type="number" id="numero id" name="numero id" placeholder="ID Number " required>
+        <div class="radio-group">
+          <span>Is the groom Muslim?</span>
+          <label><input type="radio" name="homme_musulman" required> Yes</label>
+          <label><input type="radio" name="homme_musulman"> No</label>
+        </div>
+        <div class="radio-group">
+          <span>Does he have four or more wives?</span>
+          <label><input type="radio" name="homme_epouses" required> Yes</label>
+          <label><input type="radio" name="homme_epouses"> No</label>
+        </div>
+        <div class="radio-group">
+          <span>Were they breastfed by the same woman?</span>
+          <label><input type="radio" name="allaitement" required> Yes</label>
+          <label><input type="radio" name="allaitement"> No</label>
+            <legend>🧑‍🤝‍🧑 Witness for the groom</legend>
+  
+ 
+  <input type="text" id="temoin_nom" name="temoin_nom" placeholder="Last Name" required>
+
+  
+  <input type="text" id="temoin_prenom" name="temoin_prenom" placeholder="First Name" required>
+
+  <input type="number" id="numero id" name="numero id" placeholder="ID Number " required>
+        </div>
+      </fieldset>
+
+      <!-- Femme -->
+      <fieldset>
+        <legend>👩 Bride's Information</legend>
+        <input type="text" placeholder="Last Name" required>
+        <input type="text" placeholder="First Name" required>
+        <input type="date" required>
+        <div class="radio-group">
+          
+  <input type="number" id="numero id" name="numero id" placeholder="ID Number " required>
+          <span>Is she of legal age?</span>
+          <label><input type="radio" name="femme_majeure" required> Yes</label>
+          <label><input type="radio" name="femme_majeure"> No</label>
+          
+        </div>
+        <div class="radio-group">
+          <span>Free from any marital ties?</span>
+          <label><input type="radio" name="femme_libre" required> Yes</label>
+          <label><input type="radio" name="femme_libre"> No</label>
+        </div>
+        <div class="radio-group">
+          <span>Consent from guardians?</span>
+          <label><input type="radio" name="responsables_accord" required> Yes</label>
+          <label><input type="radio" name="responsables_accord"> No</label>
+         
+          
+  <legend>🧑‍🤝‍🧑 Witness for the bride</legend>
+  
+  <input type="text" id="temoin_nom" name="temoin_nom" placeholder="Last Name" required>
+
+  <input type="text" id="temoin_prenom" name="temoin_prenom" placeholder="First Name" required>
+
+  <input type="number" id="numero id" name="numero id" placeholder="ID Number" required>
+
+        </div>
+      </fieldset>
+</div>
+      <!-- Dot -->
+      <fieldset>
+        <legend>🤝 Agreement Between Both Parties</legend>
+        <input type="number" placeholder="Dowry amount " min="0" required>
+        <div class="radio-group">
+          <span>Has the dowry been paid?</span>
+          <label><input type="radio" name="dot_acquittee" required> Yes</label>
+          <label><input type="radio" name="dot_acquittee"> No</label>
+        </div>
+      </fieldset>
+
+      <!-- Imam -->
+      <fieldset>
+        <legend>🧕 Officiating Imam</legend>
+        <input type="text" placeholder="Imam's Last Name" required>
+        <input type="text" placeholder="Imam's First Name" required>
+        <label>Signature:</label>
+        <canvas id="signature-pad" width="300" height="100" style="border:1px solid #ccc;"></canvas>
+        <button type="button" onclick="clearSignature()">Clear signature</button>
+        <input type="hidden" id="imam_signature_data">
+      </fieldset>
+
+      <!-- Action -->
+      <div class="form-actions">
+      <!-- bouton d'impression -->
+<button type="button" id="btn-print">🖨️ Print</button>
+
+
+      </div>
+    </form>
+  </section>
+
+<footer class="footer">
+  <h2>Contact us</h2>
+  <p>📍 Address: Town, City, Country</p>
+  <p>📞 Phone: +215 5542 6555</p>
+  <p>📧 Email: zeot@gmail.com</p>
+  <p>🕰️ Opening hours: from Fajr to ‘Isha, 7 days a week</p>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
